@@ -1,8 +1,8 @@
 Actor.destroy_all
 Film.destroy_all
 20.times do
-  f= Film.create(title:"O zachodzie slonca", description:"piekny melancholijny film przy ktorym latwo jest popasc w otepienie umyslu")
+  f= Film.create(title: Faker::Book.title, description: Faker::Hipster.paragraph(2))
   5.times do
-    Actor.create(name:"Kate WInslet", description:"very great actress , acttractive, clever, and great playing characters", film: f)
+    Actor.create(name: Faker::Name.name, description: Faker::Hipster.paragraph(4) , film: f)
   end
 end
