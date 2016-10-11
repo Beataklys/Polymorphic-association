@@ -1,4 +1,5 @@
 <h3> comments</h3>
-<%  commentable.comments.each do |comment| %>
+<%  commentable.comments.each_with_index do |comment, i| %>
+<div><strong><%= "No. #{i+1}" %> </div></strong>
 <div><%= comment.body %></div>
 <% end %>
